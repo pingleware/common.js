@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+      <button id="press_now">Press Now ?</button>
+    <script type="text/javascript">
+        window.onload = function() {
+            console.log(window.common);
+            
+            window.common.listener('press_now','click',function(){
+                alert("Button PRESSED!");
+            });
+
+        }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "name": "@presspage/common-js",
+  "version": "1.0.0",
+  "description": "A common library of javascript functions",
+  "main": "index.js",
+  "homepage": "https://github.com/pingleware/common.js",
+  "bugs": {
+    "url": "https://github.com/pingleware/common.js/issues",
+    "email": "presspage.entertainment@gmail.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "common functions"
+  ],
+  "repository": {
+    "url": "https://github.com/pingleware/common.js.git",
+    "type": "git"
+  },
+  "author": {
+    "name": "PressPage Entertainment Inc DBA PINGLEWARE",
+    "email": "presspage.entertainment@gmail.com",
+    "url": "https://pingleware.work"
+  },
+  "maintainers": [
+    {
+      "name": "Patrick Ingle",
+      "email": "me@patruckingle.info",
+      "url": "https://patrickingle.info"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "private": false,
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "engineStrict": true
+}
