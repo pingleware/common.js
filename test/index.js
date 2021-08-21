@@ -14,9 +14,9 @@ function createWindow () {
         width: 1072,
         height: 910,
         webPreferences: {
-			nodeIntegration: false,
-			contextIsolation: true, // protect against prototype pollution
-			enableRemoteModule: false, // turn off remote
+			    nodeIntegration: false,
+			    contextIsolation: true, // protect against prototype pollution
+			    enableRemoteModule: false, // turn off remote
   		  	preload: path.join(__dirname, 'preload.js')
         }
     })

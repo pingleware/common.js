@@ -5,7 +5,8 @@
   </head>
   <body>
       <button id="press_now">Press Now ?</button>
-    <script type="text/javascript">
+      <ul id="rssfeed"></ul>
+      <script type="text/javascript">
         window.onload = function() {
             console.log(window.common);
             
@@ -13,7 +14,9 @@
                 alert("Button PRESSED!");
             });
 
+            window.common.getRSS('https://careersidekick.com/blog/feed/','rssfeed');
+
         }
-    </script>
+      </script>
   </body>
 </html>

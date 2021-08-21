@@ -1,7 +1,7 @@
 
 const {contextBridge} = require("electron");
 
-const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript} = require("@presspage/common-js");
+const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript, getRSS} = require("@presspage/common-js");
 
 contextBridge.exposeInMainWorld(
     "common", {
@@ -16,6 +16,7 @@ contextBridge.exposeInMainWorld(
         editable: editable,
         http_post: http_post,
         wp_ajax: wp_ajax,
-        loadScript: loadScript
+        loadScript: loadScript,
+        getRSS: getRSS
     }
 );

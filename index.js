@@ -133,6 +133,31 @@ function loadScript(scriptLocationAndName) {
     head.appendChild(script);
 }
 
+function read_feed(url, callback) {
+    fetch(url)
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(callback);
+}
+
+/**
+ * @param url rss feed url
+ * @param list_element an HTML <ul id="list_element"></ul> element 
+ */
+function getRSS(url,list_element) {
+    read_feed(url, function (data) {
+        const items = data.querySelectorAll("item");
+        document.getElementById(list_element).innerHTML = '';
+        items.forEach(function (entry) {
+            var link = entry.querySelector("link").innerHTML;
+            var title = entry.querySelector("title").innerHTML;
+            title = title.replace("<![CDATA[", ""); //  Needed if title is wrapped around CDATA, otherwise bypass this step
+            title = title.replace("]]>", "");
+            document.getElementById(list_element).innerHTML += `<li><a href="${link}" title="${title}" target="_blank" class="animate" style="text-decoration: none;">${title}</a></li>`;
+        });
+    });
+}
+
 module.exports = {
     $,
     id,
@@ -144,5 +169,6 @@ module.exports = {
     http_post,
     wp_ajax,
     webdevencrypt,
-    loadScript
+    loadScript,
+    getRSS
 }
