@@ -158,6 +158,27 @@ function getRSS(url,list_element) {
     });
 }
 
+const replaceText = (selector, text) => {
+    const element = document.getElementById(selector)
+    if (element) element.innerText = text
+} 
+
+const setValue = (selector, value) => {
+    const element = document.getElementById(selector)
+    if (element) element.value = value;
+}
+
+const replaceHTML = (selector, html) => {
+    const element = document.getElementById(selector);
+    if (element) element.innerHTML = html;
+}
+
+const appendHTML = (selector, html) => {
+    const element = document.getElementById(selector);
+    if (element) element.innerHTML += html;
+}
+
+
 module.exports = {
     $,
     id,
@@ -170,5 +191,9 @@ module.exports = {
     wp_ajax,
     webdevencrypt,
     loadScript,
-    getRSS
+    getRSS,
+    replaceText,
+    setValue,
+    replaceHTML,
+    appendHTML
 }

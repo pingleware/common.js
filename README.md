@@ -126,6 +126,27 @@ Retrieves an RSS feed and displays in a list element,
 
     getRSS('<url of rss feed>','element_id of the list element');
 
+## replaceText
+Replaces text in a specified element,
+
+    replaceText(selector, "text");
+
+## setValue
+Set the value of a specified element,
+
+    setValue(selector, "new value");
+
+## replaceHTML
+Replaces the element HTML content,
+
+    replaceHTML(selector, "<html>");
+
+## appendHTML
+Appends additional HTML to an element HTML content,
+
+    appendHTML(selector, "<html>");
+
+
 # Contact Us
 The best contact method is via email at presspage.entertainment@gmail.com
 
