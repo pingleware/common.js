@@ -1,7 +1,7 @@
 
 const {contextBridge} = require("electron");
 
-const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript, getRSS} = require("@presspage/common-js");
+const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript, getRSS, replaceText, setValue, replaceHTML, appendHTML, todayAsISO8601, Export2Doc} = require("@presspage/common-js");
 
 contextBridge.exposeInMainWorld(
     "common", {
@@ -16,7 +16,14 @@ contextBridge.exposeInMainWorld(
         editable: editable,
         http_post: http_post,
         wp_ajax: wp_ajax,
+        webdevencrypt: webdevencrypt,
         loadScript: loadScript,
-        getRSS: getRSS
+        getRSS: getRSS,
+        replaceText: replaceText,
+        setValue: setValue,
+        replaceHTML: replaceHTML,
+        appendHTML: appendHTML,
+        todayAsISO8601: todayAsISO8601,
+        Export2Doc: Export2Doc
     }
 );

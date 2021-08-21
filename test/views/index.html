@@ -6,6 +6,11 @@
   <body>
       <button id="press_now">Press Now ?</button>
       <ul id="rssfeed"></ul>
+      <br/>
+      <textarea id="wordcontent" rows="10" cols="30"></textarea>
+      <div id="htmlcontent"></div>
+      <br/>
+      <button id="saveasdocx">Save as DOCX</button>
       <script type="text/javascript">
         window.onload = function() {
             console.log(window.common);
@@ -16,6 +21,11 @@
 
             window.common.getRSS('https://careersidekick.com/blog/feed/','rssfeed');
 
+            window.common.listener('saveasdocx','click', function(){
+              window.common.replaceHTML('htmlcontent', window.common.id('wordcontent').value);
+              var filename = 'mycontent.docx';
+              window.common.Export2Doc('htmlcontent',filename);
+            });
         }
       </script>
   </body>

@@ -21,7 +21,7 @@ Inside the preload.js,
 
     const {contextBridge} = require("electron");
 
-    const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript, getRSS, replaceText, setValue, replaceHTML, appendHTML, todayAsISO8601} = require("@presspage/common-js");
+    const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript, getRSS, replaceText, setValue, replaceHTML, appendHTML, todayAsISO8601, Export2Doc} = require("@presspage/common-js");
 
     contextBridge.exposeInMainWorld(
         "common", {
@@ -43,7 +43,8 @@ Inside the preload.js,
             setValue: setValue,
             replaceHTML: replaceHTML,
             appendHTML: appendHTML,
-            todayAsISO8601: todayAsISO8301
+            todayAsISO8601: todayAsISO8301,
+            Export2Doc: Export2Doc
         }
     );
 
@@ -158,6 +159,10 @@ Retrieves current date as ISO 8601 aka YYYY-MM-DD formant,
 
     var today = todayAsISO8601();
 
+## Export2Doc
+Saves a HTML div contents as a DOCX file,
+
+    Export2Doc('div element containing HTML content','filename.docx');
 
 # Contact Us
 The best contact method is via email at presspage.entertainment@gmail.com
