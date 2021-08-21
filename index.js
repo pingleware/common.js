@@ -178,6 +178,10 @@ const appendHTML = (selector, html) => {
     if (element) element.innerHTML += html;
 }
 
+function todayAsISO8601() {
+    var today = new Date();
+    return today.toISOString().slice(0,10);
+}
 
 module.exports = {
     $,
@@ -195,5 +199,6 @@ module.exports = {
     replaceText,
     setValue,
     replaceHTML,
-    appendHTML
+    appendHTML,
+    todayAsISO8601
 }

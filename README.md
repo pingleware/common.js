@@ -21,7 +21,7 @@ Inside the preload.js,
 
     const {contextBridge} = require("electron");
 
-    const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript} = require("@presspage/common-js");
+    const {$, id, listener, show, hide, showParent, hideParent, showAlert, editable, http_post, wp_ajax, webdevencrypt, loadScript, getRSS, replaceText, setValue, replaceHTML, appendHTML, todayAsISO8601} = require("@presspage/common-js");
 
     contextBridge.exposeInMainWorld(
         "common", {
@@ -36,7 +36,14 @@ Inside the preload.js,
             editable: editable,
             http_post: http_post,
             wp_ajax: wp_ajax,
-            loadScript: loadScript
+            webdevencrypt: webdevencrypt,
+            loadScript: loadScript,
+            getRSS: getRSS,
+            replaceText: replaceText,
+            setValue: setValue,
+            replaceHTML: replaceHTML,
+            appendHTML: appendHTML,
+            todayAsISO8601: todayAsISO8301
         }
     );
 
@@ -145,6 +152,11 @@ Replaces the element HTML content,
 Appends additional HTML to an element HTML content,
 
     appendHTML(selector, "<html>");
+
+## todayAsISO8601
+Retrieves current date as ISO 8601 aka YYYY-MM-DD formant,
+
+    var today = todayAsISO8601();
 
 
 # Contact Us
