@@ -266,13 +266,27 @@ combined_1726044879567.log
 
 For logging informational messages and places an [INFO] tag on the logging line.
 
-    info(``)
+    info(`${path.basename(__filename)}[${getLineNumber()}]: An informational message is logged`)
+
+in the log file
+
+```
+2024-09-11T22:42:10.167Z [INFO] index.js[1]: An informational message is logged
+```
+to log an object or an array, stringify the object/array using JSON.stringify(...)
 
 ### warn
 
 For logging warning messages and places an [WARN] tag on the logging line.
 
-    warn(``)
+    warn(`${path.basename(__filename)}[${getLineNumber()}]: A warning message is logged`)
+
+in the log file
+
+```
+2024-09-11T22:42:10.167Z [WARN] index.js[1]: A warning message is logged
+```
+to log an object or an array, stringify the object/array using JSON.stringify(...)
 
 ### error
 
@@ -282,6 +296,10 @@ For logging critical messages and places an [ERROR] tag on the logging line.
 
 in the log file
 
+```
+2024-09-11T22:42:10.167Z [ERROR] index.js[1]: A critical error occurred
+```
+to log an object or an array, stringify the object/array using JSON.stringify(...)
 
 # Contact Us
 
