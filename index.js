@@ -220,6 +220,18 @@ function Export2Doc(element, title='', filename = ''){
     document.body.removeChild(downloadLink);
 }
 
+const {
+    warn,
+    error,
+    info,
+    setLogPath,
+    getLogPath,
+    getLineNumber,
+    backup,
+    listLogFiles,
+    deleteLogFile,    
+} = require('./logger.js');
+
 module.exports = {
     $,
     id,
@@ -238,5 +250,16 @@ module.exports = {
     replaceHTML,
     appendHTML,
     todayAsISO8601,
-    Export2Doc
+    Export2Doc,
+    warn,
+    error,
+    info,
+    cat,   
+    mail,
+    setLogPath,
+    getLogPath,
+    getLineNumber,
+    backup,
+    listLogFiles,
+    deleteLogFile,
 }

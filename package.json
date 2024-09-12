@@ -1,11 +1,11 @@
 {
   "name": "@presspage/common-js",
-  "version": "1.4.0",
-  "description": "A common library of javascript functions",
+  "version": "1.5.0",
+  "description": "A common library of javascript functions including node logging",
   "main": "index.js",
   "homepage": "https://github.com/pingleware/common.js",
   "bugs": {
-    "url": "https://github.com/pingleware/common.js/issues",
+    "url": "https://pingleware.support",
     "email": "presspage.entertainment@gmail.com"
   },
   "scripts": {
@@ -13,7 +13,8 @@
   },
   "keywords": [
     "javascript",
-    "common functions"
+    "common functions",
+    "node logging"
   ],
   "repository": {
     "url": "https://github.com/pingleware/common.js.git",
